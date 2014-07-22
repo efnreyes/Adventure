@@ -21,6 +21,8 @@
 		F921AE18197EE84700C7D7EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F921ADFA197EE84700C7D7EC /* UIKit.framework */; };
 		F921AE20197EE84700C7D7EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F921AE1E197EE84700C7D7EC /* InfoPlist.strings */; };
 		F921AE22197EE84700C7D7EC /* AdventureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F921AE21197EE84700C7D7EC /* AdventureTests.m */; };
+		F921AE2C197EEBD800C7D7EC /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F921AE2B197EEBD800C7D7EC /* CheckMate.framework */; };
+		F921AE2F197F06E300C7D7EC /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F921AE2E197F06E300C7D7EC /* CustomViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		F921AE1D197EE84700C7D7EC /* AdventureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AdventureTests-Info.plist"; sourceTree = "<group>"; };
 		F921AE1F197EE84700C7D7EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F921AE21197EE84700C7D7EC /* AdventureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdventureTests.m; sourceTree = "<group>"; };
+		F921AE2B197EEBD800C7D7EC /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CheckMate.framework; sourceTree = "<group>"; };
+		F921AE2D197F06E300C7D7EC /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		F921AE2E197F06E300C7D7EC /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F921AE2C197EEBD800C7D7EC /* CheckMate.framework in Frameworks */,
 				F921ADF9197EE84700C7D7EC /* CoreGraphics.framework in Frameworks */,
 				F921ADFB197EE84700C7D7EC /* UIKit.framework in Frameworks */,
 				F921ADF7197EE84700C7D7EC /* Foundation.framework in Frameworks */,
@@ -101,6 +107,7 @@
 		F921ADF5197EE84700C7D7EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F921AE2B197EEBD800C7D7EC /* CheckMate.framework */,
 				F921ADF6197EE84700C7D7EC /* Foundation.framework */,
 				F921ADF8197EE84700C7D7EC /* CoreGraphics.framework */,
 				F921ADFA197EE84700C7D7EC /* UIKit.framework */,
@@ -119,6 +126,8 @@
 				F921AE0C197EE84700C7D7EC /* ViewController.m */,
 				F921AE0E197EE84700C7D7EC /* Images.xcassets */,
 				F921ADFD197EE84700C7D7EC /* Supporting Files */,
+				F921AE2D197F06E300C7D7EC /* CustomViewController.h */,
+				F921AE2E197F06E300C7D7EC /* CustomViewController.m */,
 			);
 			path = Adventure;
 			sourceTree = "<group>";
@@ -199,6 +208,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
 				TargetAttributes = {
+					F921ADF2197EE84700C7D7EC = {
+						DevelopmentTeam = 332N44E879;
+					};
 					F921AE13197EE84700C7D7EC = {
 						TestTargetID = F921ADF2197EE84700C7D7EC;
 					};
@@ -252,6 +264,7 @@
 				F921AE0D197EE84700C7D7EC /* ViewController.m in Sources */,
 				F921AE07197EE84700C7D7EC /* AppDelegate.m in Sources */,
 				F921AE03197EE84700C7D7EC /* main.m in Sources */,
+				F921AE2F197F06E300C7D7EC /* CustomViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,10 +389,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Adventure/Adventure-Prefix.pch";
 				INFOPLIST_FILE = "Adventure/Adventure-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -389,10 +409,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Adventure/Adventure-Prefix.pch";
 				INFOPLIST_FILE = "Adventure/Adventure-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CustomViewController.h"
 
 @interface ViewController ()
 
@@ -26,4 +27,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    CustomViewController *vc = segue.destinationViewController;
+    UIButton *pressedButton = (UIButton *)sender;
+    vc.title = pressedButton.currentTitle;
+    if ([segue.identifier isEqualToString:@"eatBoxesSegue"]) {
+        NSLog(@"eatBoxesSegue");
+    } else if ([segue.identifier isEqualToString:@"clearUpSegue"]) {
+        NSLog(@"clearUpSegue");
+    }
+}
+
+-(IBAction)unwindAndEndIt:(UIStoryboardSegue *)sender {
+    NSLog(@"The end");
+}
 @end
